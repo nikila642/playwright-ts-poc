@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",
-      "strict": true,
-      "esModuleInterop": true,
-      "outDir": "dist"
+    "compilerOptions": {    // explains how to compile your ts file
+      "target": "ES6",      // sets the JS version the TS compiles to 
+      "module": "commonjs", // necessary for Playwright tests to run with Node-based runtime
+      "strict": true,       // improves code, No use of undeclared variables, Catches null or undefined issues, Forces proper typing
+      "esModuleInterop": true, // allows import fs from 'fs'; // instead of const fs = require('fs');
+      "outDir": "dist"  // tells TS to output compiled JS files into a folder named dist, avoid polluting test and pages with JS code
     },
-    "include": ["tests", "pages"]
+    "include": ["tests", "pages"] // specifies which folders TypeScript should compile.
   }
